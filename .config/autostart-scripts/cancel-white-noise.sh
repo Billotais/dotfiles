@@ -1,0 +1,1 @@
+/etc/acpi/cancel-white-noise.sh
