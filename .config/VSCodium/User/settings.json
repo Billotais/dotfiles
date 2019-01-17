@@ -1,0 +1,34 @@
+{
+    "window.zoomLevel": 0,
+    "pandoc.pdfOptString": "--from markdown  --title=true --listings",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Atom One Dark",
+    "editor.fontSize": 20,
+    "glsllint.glslangValidatorPath": "/usr/bin/glslangValidator",
+    "material-icon-theme.showUpdateMessage": false,
+    "editor.fontLigatures": true,
+    "latex-workshop.view.pdf.viewer": "external",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "python.pythonPath": "/usr/bin/python3",
+    "editor.wordWrap": "on",
+    "editor.mouseWheelZoom": true,
+    "terminal.external.linuxExec": "konsole",
+    "jupyter.appendResults": false,
+    "cSpell.language": "en,fr",
+    "cSpell.userWords": [
+        "bilat",
+        "epfl",
+        "kaggle",
+        "l’epfl"
+    ],
+    "breadcrumbs.enabled": true,
+    "latex-workshop.chktex.enabled": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.intellisense.surroundCommand.enabled": true,
+    "latex-workshop.intellisense.unimathsymbols.enabled": true,
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.view.pdf.ref.viewer": "external",
+    "window.titleBarStyle": "native"
+}
