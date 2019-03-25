@@ -4,6 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:/home/lois/.gem/ruby/2.5.0/bin:$HOME/.scrip
 # Path to your oh-my-zsh installation.
 export ZSH=/home/lois/.oh-my-zsh
 
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -52,6 +53,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export SPARK_HOME="/opt/spark/spark-2.3.2-bin-hadoop2.7"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 
+setopt autocd
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -61,23 +63,23 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
 
-# EPFL courses
-alias ada="cd /home/lois/Documents/EPFL/MA1/Applied\ Data\ Analysis"
-alias fos="code /home/lois/Documents/EPFL/MA1/Foundation\ of\ Software"
-alias nlp="cd /home/lois/Documents/EPFL/MA1/Introduction\ to\ Natural\ Language\ Processing"
-alias ml="cd /home/lois/Documents/EPFL/MA1/Machine\ Learning"
-alias nm="cd /home/lois/Documents/EPFL/MA1/Numerical\ Methods\ for\ Visual\ Computing"
-alias mc="cd /home/lois/Documents/EPFL/MA1/Markov\ Chains\ and\ Algorithmic\ Applications"
-alias epfl='cd /home/lois/Documents/EPFL/MA1'
-alias vpn='sudo epfl-vpn -f'
+# EPFL Aliases
+alias nn="conda activate nn; cd ~/Documents/EPFL/MA2/Artificial\ Neural\ Networks"
+alias cv="conda activate cv; cd ~/Documents/EPFL/MA2/Computer\ Vision"
+alias db="cd ~/Documents/EPFL/MA2/Database\ Systems/cs_422_project"
+alias dis="conda activate dis; cd ~/Documents/EPFL/MA2/Distributed\ Information\ Systems"
+alias dt="cd ~/Documents/EPFL/MA2/Droit\ Et\ Technique\ II"
+alias isp="cd ~/Documents/EPFL/MA2/Information\ Security\ and\ Privacy/com_402_labs/"
+alias lt="cd ~/Documents/EPFL/MA2/Learning\ Theory"
+alias mn="cd ~/Documents/EPFL/MA2/Mobile\ Networks"
+alias epfl='cd /home/lois/Documents/EPFL/MA2'
+alias vpn='sudo epfl-vpn'
 
 # Coding utils 
 alias lab='git pull; jupyter-lab'
-alias anaconda="conda activate"
-alias py="conda activate full"
 alias java8='sudo archlinux-java set java-8-openjdk'
 alias java11='sudo archlinux-java set java-11-openjdk'
-alias code='vscodium'
+alias docker='sudo docker'
 # Systems shortcuts
 alias restart='kquitapp plasmashell && kstart  plasmashell'
 alias restartdm='sudo systemctl restart display-manager'
@@ -85,7 +87,9 @@ alias zshrc="$EDITOR ~/.zshrc"
 alias fs="amixer -c0 sset 'Headphone Mic Boost' 10dB"
 alias ssh_key='cat /home/lois/.ssh/id_rsa.pub'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias netreset='nmcli con up e8e98143-ce08-3e84-a36a-0966af22362a' 
 # Applications
+alias code='vscodium'
 alias yt2mp3='youtube-dl -x --audio-format mp3'
 alias yt2flac='youtube-dl -x --audio-format flac'
 alias spellcheck='aspell -c -d en'
@@ -93,13 +97,14 @@ alias weather='curl http://wttr.in/Blonay'
 alias ipinfo='curl ipinfo.io'
 alias sv='sudo vim'
 alias v='vim'
+alias c='vscodium'
 alias cpu='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # Remote locations
 alias iccluster='ssh -i ~/.ssh/key lbilat@iccluster028.iccluster.epfl.ch' 
-alias vps='ssh -i ~/.ssh/key -X floc@vps.floculation.ch'
-
+alias vps='ssh -i ~/.ssh/key floc@vps.floculation.ch'
+alias pi='ssh -i ~/.ssh/key -X pi@ip.bilat.xyz -p 314'
 prompt_dir() {
   prompt_segment blue black "${PWD##*/}"
 }
@@ -126,6 +131,4 @@ SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_CONDA_SYMBOL=
 
-# Enable conda 
-. /opt/anaconda/etc/profile.d/conda.sh
-
+. "/home/lois/miniconda/etc/profile.d/conda.sh"

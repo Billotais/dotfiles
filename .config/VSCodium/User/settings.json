@@ -1,8 +1,8 @@
 {
-    "window.zoomLevel": 0,
-    "pandoc.pdfOptString": "--from markdown  --title=true --listings",
+    "window.zoomLevel": -1,
+    "pandoc.pdfOptString": "--from markdown  --title=true --listings -V geometry:margin=1in",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "editor.fontSize": 20,
     "glsllint.glslangValidatorPath": "/usr/bin/glslangValidator",
     "material-icon-theme.showUpdateMessage": false,
@@ -30,5 +30,10 @@
     "latex-workshop.intellisense.unimathsymbols.enabled": true,
     "latex-workshop.latex.clean.enabled": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
-    "window.titleBarStyle": "native"
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "python.linting.pylintEnabled": true
 }
