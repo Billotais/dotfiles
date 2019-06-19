@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/home/lois/.gem/ruby/2.5.0/bin:$HOME/.scripts:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/home/lois/.gem/ruby/2.5.0/bin:$HOME/.scripts:/home/lois/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/lois/.oh-my-zsh
@@ -10,7 +10,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
-ZSH_THEME=agnoster #gitster #bullet-train #oxyde #ys #amuse
+ZSH_THEME="spaceship" #=agnoster #gitster #bullet-train #oxyde #ys #amuse
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -64,30 +64,34 @@ alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
 
 # EPFL Aliases
-alias nn="conda activate nn; cd ~/Documents/EPFL/MA2/Artificial\ Neural\ Networks"
-alias cv="conda activate cv; cd ~/Documents/EPFL/MA2/Computer\ Vision"
-alias db="cd ~/Documents/EPFL/MA2/Database\ Systems/cs_422_project"
-alias dis="conda activate dis; cd ~/Documents/EPFL/MA2/Distributed\ Information\ Systems"
+
+alias nn="conda activate main; cd ~/Documents/EPFL/MA2/Artificial\ Neural\ Networks"
+alias cv="conda activate main; cd ~/Documents/EPFL/MA2/Computer\ Vision"
+alias db="cd ~/Documents/EPFL/MA2/DatabaseSystems/cs_422_project"
+alias dis="conda activate main ; cd ~/Documents/EPFL/MA2/Distributed\ Information\ Systems"
 alias dt="cd ~/Documents/EPFL/MA2/Droit\ Et\ Technique\ II"
 alias isp="cd ~/Documents/EPFL/MA2/Information\ Security\ and\ Privacy/com_402_labs/"
-alias lt="cd ~/Documents/EPFL/MA2/Learning\ Theory"
 alias mn="cd ~/Documents/EPFL/MA2/Mobile\ Networks"
 alias epfl='cd /home/lois/Documents/EPFL/MA2'
-alias vpn='sudo epfl-vpn'
+alias vpn='sudo epfl-vpn -c'
 
 # Coding utils 
-alias lab='git pull; jupyter-lab'
+alias lab='jupyter lab'
 alias java8='sudo archlinux-java set java-8-openjdk'
 alias java11='sudo archlinux-java set java-11-openjdk'
-alias docker='sudo docker'
+alias py='conda activate main'
+alias nb='jupyter notebook'
+
 # Systems shortcuts
 alias restart='kquitapp plasmashell && kstart  plasmashell'
 alias restartdm='sudo systemctl restart display-manager'
 alias zshrc="$EDITOR ~/.zshrc"
 alias fs="amixer -c0 sset 'Headphone Mic Boost' 10dB"
-alias ssh_key='cat /home/lois/.ssh/id_rsa.pub'
+alias ssh_key='cat $SSH_KEY_PATH'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias netreset='nmcli con up e8e98143-ce08-3e84-a36a-0966af22362a' 
+alias top='htop'
+
 # Applications
 alias code='vscodium'
 alias yt2mp3='youtube-dl -x --audio-format mp3'
@@ -129,6 +133,4 @@ alias cdh='cd ~/'
 # Spaceship theme options
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_TRUNC=0
-SPACESHIP_CONDA_SYMBOL=
-
 . "/home/lois/miniconda/etc/profile.d/conda.sh"

@@ -8,6 +8,10 @@ DefaultProfile=Main.profile
 [Dialogs]
 FirstRun=false
 
+[DownloadDialog Settings]
+Height 1440=454
+Width 2560=700
+
 [Favorite Profiles]
 Favorites=
 

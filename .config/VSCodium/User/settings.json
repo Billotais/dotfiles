@@ -1,8 +1,8 @@
 {
     "window.zoomLevel": -1,
-    "pandoc.pdfOptString": "--from markdown  --title=true --listings -V geometry:margin=1in",
+    "pandoc.pdfOptString": "--from markdown  --title=true --listings -V geometry:margin=0.5in --template=eisvogel",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Nord",
     "editor.fontSize": 20,
     "glsllint.glslangValidatorPath": "/usr/bin/glslangValidator",
     "material-icon-theme.showUpdateMessage": false,
@@ -11,7 +11,7 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "python.pythonPath": "/usr/bin/python3",
+    "python.pythonPath": "/home/lois/miniconda/envs/main/bin/python",
     "editor.wordWrap": "on",
     "editor.mouseWheelZoom": true,
     "terminal.external.linuxExec": "konsole",
@@ -26,14 +26,18 @@
     "breadcrumbs.enabled": true,
     "latex-workshop.chktex.enabled": true,
     "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.intellisense.surroundCommand.enabled": true,
     "latex-workshop.intellisense.unimathsymbols.enabled": true,
-    "latex-workshop.latex.clean.enabled": true,
     "latex-workshop.view.pdf.ref.viewer": "external",
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "java.configuration.checkProjectSettingsExclusions": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "python.jediEnabled": false,
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "liveshare.featureSet": "insiders",
+    "terminal.integrated.fontFamily": "'Hack', 'PowerlineSymbols'",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "workbench.startupEditor": "newUntitledFile",
 }
