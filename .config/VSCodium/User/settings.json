@@ -1,6 +1,6 @@
 {
     "window.zoomLevel": -1,
-    "pandoc.pdfOptString": "--from markdown  --title=true --listings -V geometry:margin=0.5in --template=eisvogel",
+    "pandoc.pdfOptString": "--from markdown  --title=true --listings -V geometry:margin=0.5in #--template=eisvogel",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Nord",
     "editor.fontSize": 20,
