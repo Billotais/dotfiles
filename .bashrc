@@ -18,7 +18,7 @@ if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
     if [ -f "/home/lois/miniconda/etc/profile.d/conda.sh" ]; then
-        . "/home/lois/miniconda/etc/profile.d/conda.sh"
+# . "/home/lois/miniconda/etc/profile.d/conda.sh"  # commented out by conda initialize
         CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/home/lois/miniconda/bin:$PATH"
@@ -26,3 +26,19 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/lois/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/lois/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/home/lois/anaconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/lois/anaconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

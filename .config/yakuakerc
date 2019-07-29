@@ -3,7 +3,7 @@ Skin=arc-dark
 Translucency=true
 
 [Desktop Entry]
-DefaultProfile=Main.profile
+DefaultProfile=Profile 3.profile
 
 [Dialogs]
 FirstRun=false

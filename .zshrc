@@ -1,11 +1,10 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/home/lois/.gem/ruby/2.5.0/bin:$HOME/.scripts:/home/lois/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/home/lois/.gem/ruby/2.5.0/bin:$HOME/.scripts:/home/lois/.local/bin:/home/lois/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/lois/.oh-my-zsh
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
-
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -51,7 +50,7 @@ export BROWSER='chromium'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export SPARK_HOME="/opt/spark/spark-2.3.2-bin-hadoop2.7"
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-12-openjdk"
 
 setopt autocd
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -78,8 +77,8 @@ alias vpn='sudo epfl-vpn -c'
 # Coding utils 
 alias lab='jupyter lab'
 alias java8='sudo archlinux-java set java-8-openjdk'
-alias java11='sudo archlinux-java set java-11-openjdk'
-alias py='conda activate main'
+alias java12='sudo archlinux-java set java-12-openjdk'
+alias py='conda activate base'
 alias nb='jupyter notebook'
 
 # Systems shortcuts
@@ -91,7 +90,7 @@ alias ssh_key='cat $SSH_KEY_PATH'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias netreset='nmcli con up e8e98143-ce08-3e84-a36a-0966af22362a' 
 alias top='htop'
-
+alias flicker='sudo bash -c "echo 'high' > /sys/class/drm/card0/device/power_dpm_force_performance_level"'
 # Applications
 alias code='vscodium'
 alias yt2mp3='youtube-dl -x --audio-format mp3'
@@ -133,4 +132,6 @@ alias cdh='cd ~/'
 # Spaceship theme options
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_TRUNC=0
-. "/home/lois/miniconda/etc/profile.d/conda.sh"
+
+# added by Miniconda3 4.5.12 installer
+.  ~/anaconda/etc/profile.d/conda.sh
