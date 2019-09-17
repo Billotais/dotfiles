@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/home/lois/.gem/ruby/2.5.0/bin:$HOME/.scripts:/home/lois/.local/bin:/home/lois/scripts:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.scripts:/home/lois/.local/bin:$HOMEs/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/lois/.oh-my-zsh
@@ -32,6 +32,7 @@ plugins=(
   archlinux
   zsh-syntax-highlighting
   web-search
+
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -61,19 +62,11 @@ setopt autocd
 # CD Aliases
 alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
-
+alias xyz='cd ~/Documents/bilat.xyz'
 # EPFL Aliases
 
-alias nn="conda activate main; cd ~/Documents/EPFL/MA2/Artificial\ Neural\ Networks"
-alias cv="conda activate main; cd ~/Documents/EPFL/MA2/Computer\ Vision"
-alias db="cd ~/Documents/EPFL/MA2/DatabaseSystems/cs_422_project"
-alias dis="conda activate main ; cd ~/Documents/EPFL/MA2/Distributed\ Information\ Systems"
-alias dt="cd ~/Documents/EPFL/MA2/Droit\ Et\ Technique\ II"
-alias isp="cd ~/Documents/EPFL/MA2/Information\ Security\ and\ Privacy/com_402_labs/"
-alias mn="cd ~/Documents/EPFL/MA2/Mobile\ Networks"
-alias epfl='cd /home/lois/Documents/EPFL/MA2'
-alias vpn='sudo epfl-vpn -c'
-
+alias epfl='cd /home/lois/Documents/EPFL/MA3'
+alias vita='cd /home/lois/Documents/EPFL/MA3/Project'
 # Coding utils 
 alias lab='jupyter lab'
 alias java8='sudo archlinux-java set java-8-openjdk'
@@ -85,14 +78,15 @@ alias nb='jupyter notebook'
 alias restart='kquitapp plasmashell && kstart  plasmashell'
 alias restartdm='sudo systemctl restart display-manager'
 alias zshrc="$EDITOR ~/.zshrc"
+alias i3config="$EDITOR ~/.config/i3/config"
 alias fs="amixer -c0 sset 'Headphone Mic Boost' 10dB"
 alias ssh_key='cat $SSH_KEY_PATH'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias netreset='nmcli con up e8e98143-ce08-3e84-a36a-0966af22362a' 
 alias top='htop'
 alias flicker='sudo bash -c "echo 'high' > /sys/class/drm/card0/device/power_dpm_force_performance_level"'
+
 # Applications
-alias code='vscodium'
 alias yt2mp3='youtube-dl -x --audio-format mp3'
 alias yt2flac='youtube-dl -x --audio-format flac'
 alias spellcheck='aspell -c -d en'
@@ -100,7 +94,7 @@ alias weather='curl http://wttr.in/Blonay'
 alias ipinfo='curl ipinfo.io'
 alias sv='sudo vim'
 alias v='vim'
-alias c='vscodium'
+alias c='code'
 alias cpu='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
@@ -108,9 +102,10 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 alias iccluster='ssh -i ~/.ssh/key lbilat@iccluster028.iccluster.epfl.ch' 
 alias vps='ssh -i ~/.ssh/key floc@vps.floculation.ch'
 alias pi='ssh -i ~/.ssh/key -X pi@ip.bilat.xyz -p 314'
-prompt_dir() {
-  prompt_segment blue black "${PWD##*/}"
-}
+alias wdtv='sudo mount -t cifs -o user=,password=,vers=1.0 //192.168.192.224/wdtvlivehub/lois ~/WDTV; cd ~/WDTV '
+# prompt_dir() {
+#   prompt_segment blue black "${PWD##*/}"
+# }
 
 # Custom cd option
 mycd() {
@@ -135,3 +130,4 @@ SPACESHIP_DIR_TRUNC=0
 
 # added by Miniconda3 4.5.12 installer
 .  ~/anaconda/etc/profile.d/conda.sh
+conda activate
