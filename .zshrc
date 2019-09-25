@@ -67,6 +67,10 @@ alias xyz='cd ~/Documents/bilat.xyz'
 
 alias epfl='cd /home/lois/Documents/EPFL/MA3'
 alias vita='cd /home/lois/Documents/EPFL/MA3/Project'
+alias tcpip='cd /home/lois/Documents/EPFL/MA3/TCP\ IP/'
+alias xml='cd /home/lois/Documents/EPFL/MA3/Foundations\ and\ tools\ for\ processing\ tree\ structured\ data/'
+alias icc='cd /home/lois/Documents/EPFL/MA3/ICC'
+alias tqi="cd /home/lois/Documents/EPFL/MA3/Traitement\ quantique\ de\ l\'information/"
 # Coding utils 
 alias lab='jupyter lab'
 alias java8='sudo archlinux-java set java-8-openjdk'
