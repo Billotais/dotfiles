@@ -106,10 +106,10 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 alias iccluster='ssh -i ~/.ssh/key lbilat@iccluster028.iccluster.epfl.ch' 
 alias vps='ssh -i ~/.ssh/key floc@vps.floculation.ch'
 alias pi='ssh -i ~/.ssh/key -X pi@ip.bilat.xyz -p 314'
-alias wdtv='sudo mount -t cifs -o user=,password=,vers=1.0 //192.168.192.224/wdtvlivehub/lois ~/WDTV; cd ~/WDTV '
-# prompt_dir() {
-#   prompt_segment blue black "${PWD##*/}"
-# }
+alias pc='ssh -i ~/.ssh/key -X -L 8888:localhost:8888 lois@ip.bilat.xyz -p 42'
+prompt_dir() {
+  prompt_segment blue black "${PWD##*/}"
+}
 
 # Custom cd option
 mycd() {
